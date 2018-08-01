@@ -1,0 +1,29 @@
+{
+  "name": "react-app",
+  "version": "0.0.1",
+  "main": "src/js/nevsuite.app.root.js",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "webpack": "^1.14.0",
+    "http-server": "latest"
+  },
+  "scripts": {
+    "build-win-dev": "cmd /C node_modules\\.bin\\webpack.cmd --config ./webpack.js",
+    "build-unix-dev": "./node_modules/.bin/webpack --config ./webpack.js",
+    "build-win-dist": "cmd /C node_modules\\.bin\\webpack.cmd --config ./webpack.js --optimize-minimize",
+    "build-unix-dist": "./node_modules/.bin/webpack --config ./webpack.js --optimize-minimize"
+  },
+  "babel": {
+    "plugins": [
+      "transform-react-jsx"
+    ]
+  }
+}
